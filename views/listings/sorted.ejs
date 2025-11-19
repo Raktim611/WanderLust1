@@ -1,0 +1,70 @@
+<% layout("/Layouts/boilerplate") %>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for(let list of sortedData){%>
+        <a href="/listings/<%=list._id%> "class="listing-link">
+        <div class="card col listing-card" style="width: 20rem;">
+         <img src="<%=list.image.url%>" class="card-img-top" style="height: 20rem;" alt="listing_image">
+          <div class="card-img-overlay"></div>
+        <div class="card-body">
+         <!-- <h5 class="card-title"><%=list.title%></h5> -->
+        <p class="card-text"><b></b><%=list.title%><br>
+        &#8377;<%=list.price?list.price.toLocaleString("en-IN"):"N"%>/night
+        <i class="tax-icon"> +18%GST</i>
+        </p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+        </div>
+        </a>
+
+      <%}%> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
