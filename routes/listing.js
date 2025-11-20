@@ -35,6 +35,7 @@ router.get("/new",isLoggedin,(req,res)=>{
 router.get("/search",isLoggedin,wrapasync(async(req,res)=>{
     let{countryy}=req.query;
     let sortedData=await listing.find({country:countryy});
+    
     if(sortedData.length>0){
           return res.render("./listings/sorted.ejs",{sortedData});
     }
