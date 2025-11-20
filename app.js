@@ -34,6 +34,9 @@ app.engine("ejs",ejsmate);
 app.use(express.static(path.join(__dirname,"public")));
 
 const dburl=process.env.ATLASDB_URL;
+app.get("/",(req,res)=>{
+res.redirect("/listings")
+});
 main() 
 .then(()=>{
     console.log("Connected to DB");
